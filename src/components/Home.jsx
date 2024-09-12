@@ -50,9 +50,9 @@ export default function Home() {
           transition={{ duration: 0.5, ease: "linear" }}
         >
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500  rounded-full opacity-75 blur-xl"
+            className="absolute inset-1 bg-gradient-to-r from-purple-400 to-pink-500  rounded-full opacity-75 blur-xl"
             animate={{
-              scale: [0.9, 1.1, 0.9],
+              scale: [0.9, 1.0, 0.9],
               rotate: [0, 180, 360],
             }}
             transition={{
@@ -64,7 +64,7 @@ export default function Home() {
           <motion.img
             src={rigan}
             alt="Rigan"
-            className="rounded-full w-64 h-64 object-cover relative z-10 hue-rotate-70"
+            className="rounded-full w-60 h-60 sm:w-64 sm:h-64 object-cover relative z-10 hue-rotate-70"
             whileHover={{
               scale: [1, 1.1, 1],
               rotate: [0, 45, -45, 0],
