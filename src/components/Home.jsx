@@ -64,7 +64,7 @@ export default function Home() {
           <motion.img
             src={rigan}
             alt="Rigan"
-            className="rounded-full w-60 h-60 sm:w-64 sm:h-64 object-cover relative z-10 hue-rotate-70"
+            className="rounded-full w-60 h-60 sm:w-64 sm:h-64 left-3 sm:left-0  object-cover relative z-10 hue-rotate-70"
             whileHover={{
               scale: [1, 1.1, 1],
               rotate: [0, 45, -45, 0],

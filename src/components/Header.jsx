@@ -1,5 +1,6 @@
 import React from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import riglogo from "../assets/icons/riglogo.jpg";
 
 const Header = ({
   navItems,
@@ -12,7 +13,10 @@ const Header = ({
   return (
     <header className="fixed top-0 left-0 right-0 mb-5 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center ">
-        <h1 className="text-2xl font-bold">RiGaN</h1>
+        <img
+          src={riglogo}
+          className="p-1 h-12 w-12 object-cover hue-rotate-180 saturate-100"
+        />
         <nav className="hidden md:flex space-x-4">
           {navItems.map((item) => (
             <button

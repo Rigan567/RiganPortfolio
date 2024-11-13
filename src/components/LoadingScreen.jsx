@@ -75,7 +75,7 @@ export default function LoadingScreen({ onLoadingComplete }) {
               />
             </div>
             <motion.p
-              className="mt-2 text-gray-400"
+              className="mt-2 text-gray-400 font-bold"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}

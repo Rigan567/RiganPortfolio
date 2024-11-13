@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import data from "../assets/data.json";
+import { Github, MoveUpRight } from "lucide-react";
 
 export default function Works() {
   return (
@@ -20,21 +21,31 @@ export default function Works() {
             <motion.img
               src={project.imgSrc}
               alt={`Project ${project.title}`}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-contain"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
             />
             <div className="p-4">
               <h4 className="font-semibold mb-2">{project.title}</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 h-48">
                 {project.description}
               </p>
-              <a
-                href={project.url}
-                className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition duration-300"
-              >
-                View Project
-              </a>
+              <div className=" flex flex-1 justify-start gap-2 items-center">
+                <a
+                  href={project.url}
+                  target="blank"
+                  className="flex gap-2 px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-800 transition duration-300"
+                >
+                  Live <MoveUpRight />
+                </a>
+                <a
+                  href={project.github}
+                  target="blank"
+                  className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-800 transition duration-300"
+                >
+                  <Github />
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}
